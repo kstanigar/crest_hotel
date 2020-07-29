@@ -1,16 +1,18 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    
 }
 body {
     margin: 0;
     padding: 0;
     font-family: "Monterserrat", sans-serif;
+    max-width: 100vw;
 }
 /* End of common styles */
 
 /* Navbar */
-/* sidebar */
+/* Sidebar */
 .sidebar {
     width: 8rem;
     height: 100%;
@@ -68,7 +70,8 @@ body {
     font-size: 1.5rem;
     color: #777;
 }
-/* end of sidebar */
+/* End of sidebar */
+
 /* Navigation */
 .navigation {
     position: fixed;
@@ -193,7 +196,7 @@ body {
     width: 2.5rem;
 }
 /* End of Navigation */
-/*  end of Navbar */
+/*  End of Navbar */
 
 /* Header */
 .header {
@@ -285,6 +288,7 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     color: #555;
+    text-shadow: 0px 2px 2px rgba(34, 32, 41, 0.6);
 }
 .small-underline {
     width: 9rem;
@@ -307,6 +311,7 @@ body {
 }
 .about-us-paragraph {
     font-size: 1.6rem;
+    line-height: 2rem;
     font-style: italic;
     font-weight: 300;
     text-align: center;
@@ -323,10 +328,15 @@ body {
     border: 0.1rem solid #b85d1c;
     cursor: pointer;
     outline: none;
+    box-shadow: 1px 1px 1px rgba(34, 32, 41, 0.6);
+    transition: all 0.3s ease;
 }
 .btn-arrow {
     margin-left: 0.5rem;
     transition: margin-left 0.4s;
+}
+.about-us-btn:hover {
+    box-shadow: none;
 }
 .about-us-btn:hover .btn-arrow {
     margin-left: 1.5rem;
@@ -338,7 +348,7 @@ body {
 .image {
     width: 32rem;
     position: absolute;
-    top:60%;
+    top: 50%;
     left: 50%;
     box-shadow: 0 3rem 6rem rgba(0,0,0,0.4);
     border-radius: 0.4rem;
@@ -356,7 +366,7 @@ body {
 .image-4 {
     transform: translate(-30%, -30%);
 }
-/*end of About us */
+/* End of About us */
 /* Common Header */
 .common-header {
     padding: 5rem;
@@ -369,7 +379,7 @@ body {
     letter-spacing: 0.2rem;
 }
 /* End of Common Header */
-/* Rooms */
+/* Rooms Section */
 .rooms {
     margin-left: 8rem;
 }
@@ -407,6 +417,9 @@ body {
     text-align: right;
     margin: 0;
 }
+.btn-container {
+    position: relative;
+}
 .room-card-btn {
     width: 15rem;
     padding: 1.5rem 1rem;
@@ -419,6 +432,40 @@ body {
     border-radius: 10rem;
     cursor: pointer;
     outline: none;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+.room-card-btn::before {
+    content: "BOOK NOW >>";
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.room-card-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.7rem;
+    font-family: "Montserrat", sans-sarif;
+    width: 0rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem;
+    border: 0.1rem solid #b85d1c;
+    background-color: #b85d1c;
+    font-weight: bold;
+    border-radius: 10rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.room-card-btn:hover::before {
+    opacity: 1;
+}
+.room-card-btn:hover::after {
+    width: 13rem;
+    opacity: 1;  
 }
 .rooms-btn-wrapper {
     text-align: center;
@@ -440,16 +487,18 @@ body {
     color: #ddd;
     background-color: #b85d1c;
 }
-/*end of Rooms */
-/*Customer Card */
+/* End of Rooms */
+
+/* Customer Section */
 .customers {
     margin-left: 8rem;
     padding-bottom: 7rem;
     background-color: #15141b;
 }
 .customers-paragraph {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     line-height: 2.3rem;
+    font-weight: 200;
     color: #ddd;
     width: 60%;
     margin: 2rem auto 8rem auto;
@@ -488,4 +537,93 @@ body {
     font-size: 1.3rem;
     font-style: italic;
 }
-/*end of Customer Card */
+/* End of Customer Section */
+
+/* Footer Section*/
+.footer {
+    margin-left: 8rem;
+}
+.main-part {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 4rem;
+}
+.footer-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: goldenrod;
+    margin: 1rem 0 3rem 0;
+}
+.footer-list {
+    list-style: none;
+    padding-right: 0;
+}
+.footer-list-item {
+    margin-bottom: 2rem;
+}
+.footer-list-link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #bbb;
+}
+.contact p {
+    font-size: 1.5rem;
+    color: #bbb;
+    margin-bottom: 4rem;
+}
+.footer-form {
+    display: flex;
+}
+.footer-input {
+    width: 25rem;
+    padding: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8rem;
+    color: #444;
+    outline: none;
+}
+.footer-btn {
+    padding: 1rem;
+    background-color: #b85d1c;
+    color: #ddd;
+    border: none;
+}
+.gallery {
+    max-width: 45rem;
+}
+.image-wrapper {
+    width: 12rem;
+    margin: 0.4rem;
+    overflow: hidden;
+}
+.footer-image {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all 0.5s ease;
+}
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-image:hover {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+.creator-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 0 4rem;
+}
+.copyright-text {
+    font-size: 1.3rem;
+    color: #aaa;
+}
+.text-right {
+    font-size: 1rem;
+    color: rgb(26, 26, 26);
+}
+/* End of Footer Section */
