@@ -754,6 +754,12 @@ body {
         padding: 1rem 0.5rem;
         font-size: 1rem;
     }
+    .room-card-btn::after {
+        height: 0.4rem;
+    }
+    .room-card-btn:hover::after {
+        width: 10rem; 
+    }
     .customers-paragraph {
         font-size: 1.4rem;
         width: 80%;
@@ -766,5 +772,13 @@ body {
     }
     .image-wrapper {
         width: 9rem;
+    }
+}
+@media (max-width: 375px) {
+    .about-us-content {
+        padding: 4rem;
+    }
+    .room-card {
+        margin: 5rem 2rem;
     }
 }
