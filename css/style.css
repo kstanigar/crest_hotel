@@ -1,7 +1,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -645,6 +645,9 @@ body {
     }
     .footer-list-item {
         margin-right: 3rem;
+    }
+    .gallery {
+        margin-top: 2rem;
     }
 }
 
