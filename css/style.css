@@ -680,6 +680,12 @@ body {
     }
 }
 @media (max-width: 750px) {
+    .about-us-heading {
+        font-size: 3.5rem;
+    }
+    .sub-heading {
+        font-size: 2.75rem;
+    }
     .customer-card {
         flex-direction: column;
         width: 20rem;
