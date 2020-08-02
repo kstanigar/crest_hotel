@@ -901,11 +901,12 @@ body {
 }
 @media (max-width: 500px) {
     .navigation {
-        width: 28rem;
+        width: 80%;
     }
     .navigation-search-input {
-        width: 20rem;
+        width: 22rem;
     }
+    /* .navigation-search-btn */
     .hotel-heading {
         font-size: 2rem;
         margin: auto 0;
