@@ -513,10 +513,12 @@ body {
     letter-spacing: 0.2rem;
 }
 /* End of Common Header */
+
 /* Rooms Section */
 .rooms {
     margin-left: 8rem;
 }
+
 .rooms-cards-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -528,7 +530,7 @@ body {
             justify-content: center;
 }
 .room-card {
-    width: 60rem;
+    width: 50rem;
     margin: 5rem;
     background-color: #15141b;
     -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
